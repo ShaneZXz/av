@@ -1,5 +1,5 @@
 .page-header {
-	height: 500px;
+	height: 420px;
 	width: 100%;
 	overflow: hidden;
     position: relative;
@@ -17,7 +17,7 @@
 	display: block;
 	max-width: 50rem;
 	text-align: center;
-	margin: 30px auto;
+	margin: 2.5rem auto;
 	font-weight: bolder;
 
 }
@@ -33,4 +33,35 @@
   transform: translateX(50%) translateY(-50%);
   position: absolute;
   z-index: -200;
+}
+
+.page-body .summary{
+	text-align: center;
+	padding: 7px;
+}
+
+/*.page-body .summary::after {
+	content: "";
+	height: 10px;
+	display: block;
+	background-color: #4594ff;
+	position: relative;
+	box-shadow: 1rem 0.3rem 0rem rgba(0,0,0,0.7);
+	top: 0;
+	left: 3.5rem;
+	transform: skew(-60deg);
+}*/
+
+.we-offer .section{
+	background-color:#4594ff;
+	height: 100%;
+	padding:7px;
+}
+
+.we-offer .section .title {
+	position: relative;
+}
+
+.we-offer .section .title h5 {
+	font-size: 32px;
 }
