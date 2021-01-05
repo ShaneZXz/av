@@ -1,0 +1,36 @@
+.page-header {
+	height: 500px;
+	width: 100%;
+	overflow: hidden;
+    position: relative;
+}
+
+.page-header .header-title img {
+	height: auto;
+	width: 70vmin;
+	display: block;
+	margin:5em auto 0 auto;
+}
+
+.page-header .header-title .text{
+	color: white;
+	display: block;
+	max-width: 50rem;
+	text-align: center;
+	margin: 30px auto;
+	font-weight: bolder;
+
+}
+
+#CircutVid {
+  position: absolute;
+  right: 50vw;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  top: 100%;
+  left: 0;
+  transform: translateX(50%) translateY(-50%);
+  position: absolute;
+  z-index: -200;
+}
