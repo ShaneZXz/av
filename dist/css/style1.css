@@ -1,0 +1,111 @@
+.page-header {
+  height: 420px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.page-header .header-title img {
+  height: auto;
+  width: 70vmin;
+  display: block;
+  margin: 5em auto 0 auto;
+}
+.page-header .header-title .text {
+  color: white;
+  display: block;
+  max-width: 50rem;
+  text-align: center;
+  margin: 2.5rem auto;
+  font-weight: bolder;
+  transition: background-color 0.5s;
+}
+
+#CircutVid {
+  position: absolute;
+  right: 50vw;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  top: 100%;
+  left: 0;
+  transform: translateX(50%) translateY(-50%);
+  position: absolute;
+  z-index: -200;
+}
+
+.page-body .summary {
+  text-align: center;
+  padding: 7px;
+}
+
+.we-offer .section {
+  height: 100%;
+  padding: 7px;
+  text-align: center;
+  background-color: #fff;
+  color: #4594ff;
+  /*border:2px solid #4594ff;
+  border-collapse: collapse;*/
+  margin: 0px 5px 0px 5px;
+}
+.we-offer .section .title {
+  position: relative;
+  font-size: 26px;
+  font-weight: bolder;
+}
+.we-offer .section .icon {
+  font-size: 32px;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.35);
+}
+
+.current-projects {
+  display: grid;
+  grid-template-columns: 6rem auto;
+  padding: 10px 0.5rem;
+}
+.current-projects .button-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.current-projects .button-line .pjct-btn {
+  font-size: 40px;
+  background-color: red;
+  margin: 5px 5px;
+  width: 4.5rem;
+  height: 4.5rem;
+  display: block;
+}
+.current-projects .button-line .pjct-btn .svg {
+  display: block;
+  height: 100%;
+  width: auto;
+  position: relative;
+  top: -0.2rem;
+}
+.current-projects .button-line .pjct-btn .svg.parking {
+  top: 0rem;
+}
+.current-projects .button-line .pjct-btn .svg.termo {
+  top: 0rem;
+}
+.current-projects .project-data {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .current-projects {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 10px 0.5rem;
+  }
+
+  .current-projects .button-line {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+/*# sourceMappingURL=style1.css.map */
