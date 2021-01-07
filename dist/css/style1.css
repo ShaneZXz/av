@@ -59,41 +59,11 @@
 }
 
 .current-projects {
-  display: grid;
-  grid-template-columns: 6rem auto;
-  padding: 10px 0.5rem;
-  background-color: #4594ff;
-  color: white;
+  padding: 0px 8.5rem;
 }
-.current-projects .button-line {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.current-projects .button-line .pjct-btn {
-  font-size: 40px;
-  background-color: red;
-  margin: 5px 5px;
-  width: 4.5rem;
-  height: 4.5rem;
-  display: block;
-}
-.current-projects .button-line .pjct-btn .svg {
-  display: block;
-  height: 100%;
-  width: auto;
-  position: relative;
-  top: -0.2rem;
-}
-.current-projects .button-line .pjct-btn .svg.parking {
-  top: 0rem;
-}
-.current-projects .button-line .pjct-btn .svg.termo {
-  top: 0rem;
-}
-.current-projects .project-data {
-  display: block;
+.current-projects .project {
+  border: 1px solid #4594ff;
+  margin: 5px;
 }
 
 @media screen and (max-width: 600px) {
