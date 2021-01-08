@@ -3,6 +3,7 @@ $av-highlight:#ffb045;
 $av-dark:#565656;
 $av-light:#e2eeff;
 $av-triadic:#ff7cb4;
+$av-regdark:#2d3949;
 
 .page-header {
 	height: 420px;
@@ -123,7 +124,38 @@ $av-triadic:#ff7cb4;
 	}
 }
 
+.contact-us {
+	display:block;
+	background-color: $av-regdark;
+	padding:2rem 5rem;
+	
+	h3 {
+		margin:0 0 2rem 0;
+		font-size:40px;
+		color:white;
+		font-weight: bolder;
+	}
 
+	.form-control {
+		direction: rtl;
+		background-color: transparent;
+		border:0px solid red;
+		border-radius: 0px;
+		border-bottom:1px solid #ced4da;
+		color:white;
+		&:focus {
+			box-shadow:5px 5px 5px white;
+		}
+	}
+
+	.form-text {
+		color:rgb(209, 209, 209);
+	}
+	
+	label {
+		color:white;
+	}
+}
 
 
 

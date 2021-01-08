@@ -94,6 +94,35 @@
   margin: 1rem 0;
 }
 
+.contact-us {
+  display: block;
+  background-color: #2d3949;
+  padding: 2rem 5rem;
+}
+.contact-us h3 {
+  margin: 0 0 2rem 0;
+  font-size: 40px;
+  color: white;
+  font-weight: bolder;
+}
+.contact-us .form-control {
+  direction: rtl;
+  background-color: transparent;
+  border: 0px solid red;
+  border-radius: 0px;
+  border-bottom: 1px solid #ced4da;
+  color: white;
+}
+.contact-us .form-control:focus {
+  box-shadow: 5px 5px 5px white;
+}
+.contact-us .form-text {
+  color: #d1d1d1;
+}
+.contact-us label {
+  color: white;
+}
+
 @media screen and (max-width: 600px) {
   .current-projects {
     display: grid;
