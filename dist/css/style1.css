@@ -59,7 +59,7 @@
 }
 
 .current-projects {
-  padding: 0px 8.5rem;
+  padding: 1rem 8.5rem;
 }
 .current-projects .project {
   border-bottom: 2px solid #4594ff;
@@ -69,7 +69,7 @@
   border-bottom-left-radius: 15px;
   border-top-left-radius: 5px;
   box-shadow: -5px -5px 5px #e2eeff;
-  margin: 10px;
+  height: 100%;
 }
 .current-projects .project.reverse {
   border-right: 0px solid #4594ff;
@@ -81,10 +81,17 @@
   box-shadow: 5px -5px 5px #e2eeff;
 }
 .current-projects .project svg {
-  width: 5rem;
+  width: 6rem;
   height: auto;
-  -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
-  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
+  -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+}
+.current-projects .project p {
+  padding: 0.5rem 2rem;
+  text-align: right;
+}
+.current-projects .project h5 {
+  margin: 1rem 0;
 }
 
 @media screen and (max-width: 600px) {
