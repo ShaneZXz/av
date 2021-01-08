@@ -1,4 +1,8 @@
-$av-blue:#4594ff;
+$av-reg:#4594ff;
+$av-highlight:#ffb045;
+$av-dark:#565656;
+$av-light:#e2eeff;
+$av-triadic:#ff7cb4;
 
 .page-header {
 	height: 420px;
@@ -82,8 +86,31 @@ $av-blue:#4594ff;
 .current-projects {
 	padding:0px 8.5rem;
 	.project{
-		border:1px solid $av-blue;
-		margin: 5px;
+		border-bottom:2px solid $av-reg;
+		border-right: 2px solid $av-reg;
+		border-bottom-right-radius: 5px;
+		border-top-right-radius: 15px;
+		border-bottom-left-radius: 15px;
+		border-top-left-radius: 5px;
+		box-shadow: -5px -5px 5px $av-light;
+		margin: 10px;
+		&.reverse {
+			border-right: 0px solid $av-reg;
+			border-left: 2px solid $av-reg;
+			border-bottom-right-radius: 15px;
+			border-bottom-left-radius: 5px;
+			border-top-left-radius: 15px;
+			border-top-right-radius: 5px;
+			box-shadow: 5px -5px 5px #e2eeff;
+		}
+
+		svg {
+			width:5rem;
+			height: auto;
+			-webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+  			filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+		}
+
 	}
 }
 
