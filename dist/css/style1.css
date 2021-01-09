@@ -101,7 +101,6 @@
   box-shadow: 5px -5px 5px #e2eeff;
 }
 .current-projects .project.reverse a {
-  bottom: 0;
   left: 0;
 }
 .current-projects .project.reverse a:before {
