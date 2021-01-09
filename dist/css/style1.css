@@ -38,15 +38,27 @@
   padding: 7px;
 }
 
+.we-offer {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
 .we-offer .section {
   height: 100%;
   padding: 7px;
   text-align: center;
-  background-color: #fff;
-  color: #4594ff;
+  background-color: #4594ff;
+  color: #fff;
   /*border:2px solid #4594ff;
   border-collapse: collapse;*/
-  margin: 0px 5px 0px 5px;
+  margin: 0px 0px 0px 0px;
+  transition: color 0.5s, background-color 0.5s;
+}
+.we-offer .section:hover {
+  background-color: #fff;
+  color: #4594ff;
+}
+.we-offer .section:focus {
+  background-color: #fff;
+  color: #4594ff;
 }
 .we-offer .section .title {
   position: relative;
@@ -60,6 +72,9 @@
 
 .current-projects {
   padding: 1rem 8.5rem;
+}
+.current-projects .col-12 {
+  padding: 0.7rem;
 }
 .current-projects .project {
   border-bottom: 2px solid #4594ff;
@@ -114,7 +129,7 @@
   color: white;
 }
 .contact-us .form-control:focus {
-  box-shadow: 5px 5px 5px white;
+  box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.2);
 }
 .contact-us .form-text {
   color: #d1d1d1;
@@ -125,15 +140,11 @@
 
 @media screen and (max-width: 600px) {
   .current-projects {
-    display: grid;
-    grid-template-columns: auto;
-    padding: 10px 0.5rem;
+    padding: 10px 0.2rem;
   }
 
-  .current-projects .button-line {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  .contact-us {
+    padding: 2rem 2rem;
   }
 }
 
