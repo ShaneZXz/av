@@ -21,7 +21,7 @@ $av-regdark:#2d3949;
 		}
 
 		.text {
-			color: white;
+			color: #fff;
 			display: block;
 			max-width: 50rem;
 			text-align: center;
@@ -63,19 +63,17 @@ $av-regdark:#2d3949;
 		height: 100%;
 		padding:7px; 
 		text-align: center;
-		background-color:$av-reg;
+		background-color: $av-reg;
 		color:#fff;
-		/*border:2px solid #4594ff;
-		border-collapse: collapse;*/
 		margin: 0px 0px 0px 0px;
-		transition: color 0.5s, background-color 0.5s;
+		transition: color 0.4s, background-color 0.4s;
 
 		&:hover {
-			background-color: #fff;
+			background-color:#fff;
 			color:$av-reg;
 		}
 		&:focus{
-			background-color: #fff;
+			background-color:#fff;
 			color:$av-reg;
 		}
 
@@ -112,6 +110,10 @@ $av-regdark:#2d3949;
 		border-top-left-radius: 5px;
 		box-shadow: -5px -5px 5px $av-light;
 		height: 100%;
+		position: relative;
+		padding-bottom:30px;
+		overflow: hidden;
+		
 		
 		&.reverse {
 			border-right: 0px solid $av-reg;
@@ -120,7 +122,20 @@ $av-regdark:#2d3949;
 			border-bottom-left-radius: 5px;
 			border-top-left-radius: 15px;
 			border-top-right-radius: 5px;
-			box-shadow: 5px -5px 5px #e2eeff;
+			box-shadow: 5px -5px 5px $av-light;
+
+			a{	
+				bottom:0;
+				left:0;
+			
+				&:before{
+					top: 0;
+					right: -1rem;
+					transform: skew(40deg);
+				}
+	
+			}
+
 		}
 
 		svg {
@@ -139,6 +154,41 @@ $av-regdark:#2d3949;
 			margin:1rem 0;
 		}
 
+		a{
+			display: block;
+			position: absolute;
+			background-color: $av-reg;
+			padding:5px;
+			bottom:0;
+			width: 15rem;
+			overflow: visible;
+			color:#fff;
+			text-decoration: none;
+			font-weight: bolder;
+			transition: text-shadow 0.5s;
+			
+			
+			&:before{
+				content: "";
+				display: block;
+				position: absolute;
+				background-color: $av-reg;
+				width: 2rem;
+				height: 101%;
+				top: 0;
+				left: -1rem;
+				transform: skew(-40deg);
+				
+			}
+			&:hover {
+				text-shadow: 5px 5px 5px (rgba(0,0,0,0.35));
+			}
+			&:focus {
+				text-shadow: 5px 5px 5px (rgba(0,0,0,0.35));
+			}
+
+		}
+
 	}
 }
 
@@ -150,7 +200,7 @@ $av-regdark:#2d3949;
 	h3 {
 		margin:0 0 2rem 0;
 		font-size:40px;
-		color:white;
+		color:#fff;
 		font-weight: bolder;
 	}
 
@@ -159,8 +209,8 @@ $av-regdark:#2d3949;
 		background-color: transparent;
 		border:0px solid red;
 		border-radius: 0px;
-		border-bottom:1px solid #ced4da;
-		color:white;
+		border-bottom:1px solid $av-light;
+		color:#fff;
 		&:focus {
 			box-shadow:1px 1px 5px rgba(255,255,255,0.2);
 		}
@@ -172,7 +222,7 @@ $av-regdark:#2d3949;
 	}
 	
 	label {
-		color:white;
+		color:#fff;
 	}
 
 	

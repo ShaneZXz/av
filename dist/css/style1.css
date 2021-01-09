@@ -11,7 +11,7 @@
   margin: 5em auto 0 auto;
 }
 .page-header .header-title .text {
-  color: white;
+  color: #fff;
   display: block;
   max-width: 50rem;
   text-align: center;
@@ -47,10 +47,8 @@
   text-align: center;
   background-color: #4594ff;
   color: #fff;
-  /*border:2px solid #4594ff;
-  border-collapse: collapse;*/
   margin: 0px 0px 0px 0px;
-  transition: color 0.5s, background-color 0.5s;
+  transition: color 0.4s, background-color 0.4s;
 }
 .we-offer .section:hover {
   background-color: #fff;
@@ -85,6 +83,9 @@
   border-top-left-radius: 5px;
   box-shadow: -5px -5px 5px #e2eeff;
   height: 100%;
+  position: relative;
+  padding-bottom: 30px;
+  overflow: hidden;
 }
 .current-projects .project.reverse {
   border-right: 0px solid #4594ff;
@@ -94,6 +95,15 @@
   border-top-left-radius: 15px;
   border-top-right-radius: 5px;
   box-shadow: 5px -5px 5px #e2eeff;
+}
+.current-projects .project.reverse a {
+  bottom: 0;
+  left: 0;
+}
+.current-projects .project.reverse a:before {
+  top: 0;
+  right: -1rem;
+  transform: skew(40deg);
 }
 .current-projects .project svg {
   width: 6rem;
@@ -108,6 +118,36 @@
 .current-projects .project h5 {
   margin: 1rem 0;
 }
+.current-projects .project a {
+  display: block;
+  position: absolute;
+  background-color: #4594ff;
+  padding: 5px;
+  bottom: 0;
+  width: 15rem;
+  overflow: visible;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bolder;
+  transition: text-shadow 0.5s;
+}
+.current-projects .project a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #4594ff;
+  width: 2rem;
+  height: 101%;
+  top: 0;
+  left: -1rem;
+  transform: skew(-40deg);
+}
+.current-projects .project a:hover {
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.35);
+}
+.current-projects .project a:focus {
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.35);
+}
 
 .contact-us {
   display: block;
@@ -117,7 +157,7 @@
 .contact-us h3 {
   margin: 0 0 2rem 0;
   font-size: 40px;
-  color: white;
+  color: #fff;
   font-weight: bolder;
 }
 .contact-us .form-control {
@@ -125,8 +165,8 @@
   background-color: transparent;
   border: 0px solid red;
   border-radius: 0px;
-  border-bottom: 1px solid #ced4da;
-  color: white;
+  border-bottom: 1px solid #e2eeff;
+  color: #fff;
 }
 .contact-us .form-control:focus {
   box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.2);
@@ -135,7 +175,7 @@
   color: #d1d1d1;
 }
 .contact-us label {
-  color: white;
+  color: #fff;
 }
 
 @media screen and (max-width: 600px) {
