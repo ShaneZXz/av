@@ -133,7 +133,6 @@ $av-w-text: rgb(209, 209, 209);
 			a{	
 				left:0;
 				
-			
 				&:before{
 					top: 0;
 					right: -1rem;
@@ -165,7 +164,7 @@ $av-w-text: rgb(209, 209, 209);
 			position: absolute;
 			background-color: $av-reg;
 			padding:5px;
-			bottom:-0.1rem;
+			bottom:-0.2rem;
 			width: 15rem;
 			height: auto;
 			overflow: visible;
