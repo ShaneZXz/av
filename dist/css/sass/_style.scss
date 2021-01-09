@@ -4,6 +4,7 @@ $av-dark:#565656;
 $av-light:#e2eeff;
 $av-triadic:#ff7cb4;
 $av-regdark:#2d3949;
+$av-w-text: rgb(209, 209, 209);
 
 .page-header {
 	height: 420px;
@@ -67,6 +68,7 @@ $av-regdark:#2d3949;
 		color:#fff;
 		margin: 0px 0px 0px 0px;
 		transition: color 0.4s, background-color 0.4s;
+		font-weight: 800;
 
 		&:hover {
 			background-color:#fff;
@@ -86,6 +88,10 @@ $av-regdark:#2d3949;
 		.icon {
 			font-size:32px;
 			text-shadow: 5px 5px 5px rgba(0,0,0,0.35);
+		}
+
+		p {
+			padding:0.5rem;
 		}
 	}
 }
@@ -218,7 +224,7 @@ $av-regdark:#2d3949;
 	}
 
 	.form-text {
-		color:rgb(209, 209, 209);
+		color:$av-w-text;
 	}
 	
 	label {
