@@ -234,12 +234,29 @@ $av-w-text: rgb(209, 209, 209);
 	
 }
 
-.fs-window {
-	height: 100%;
+.header {
 	width: 100%;
-	background-color: white;
-	position: absolute;
-	top:0;
+	height: auto;
+	padding:1.5rem 0;
+
+	img {
+		display: block;
+		margin: 0 auto;
+		width: 300px;
+		height: auto;
+	}
+}
+
+.product-title {
+	display:grid;
+	grid-template-columns: 200px auto;
+	grid-template-rows: 100px auto;
+	
+	.img{
+		grid-row-start: 1;
+  		grid-row-end: span 2;
+	}
+
 }
 
 
@@ -251,5 +268,17 @@ $av-w-text: rgb(209, 209, 209);
 	.contact-us {
 		padding:2rem 2rem;
 	}
+
+	.product-title {
+		display:grid;
+		grid-template-columns: auto;
+		grid-template-rows: auto;
+
+		.img{
+			grid-row-start: 1;
+			grid-row-end: 1;
+		}
+	}
+
 
 }
