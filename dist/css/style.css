@@ -1,27 +1,23 @@
-
-
 .page-header {
-	height: 420px;
-	width: 100%;
-	overflow: hidden;
-    position: relative;
+  height: 420px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
-
 .page-header .header-title img {
-	height: auto;
-	width: 70vmin;
-	display: block;
-	margin:5em auto 0 auto;
+  height: auto;
+  width: 70vmin;
+  display: block;
+  margin: 5em auto 0 auto;
 }
-
-.page-header .header-title .text{
-	color: white;
-	display: block;
-	max-width: 50rem;
-	text-align: center;
-	margin: 2.5rem auto;
-	font-weight: bolder;
-
+.page-header .header-title .text {
+  color: #fff;
+  display: block;
+  max-width: 50rem;
+  text-align: center;
+  margin: 2.5rem auto;
+  font-weight: bolder;
+  transition: background-color 0.5s;
 }
 
 #CircutVid {
@@ -37,100 +33,171 @@
   z-index: -200;
 }
 
-.page-body .summary{
-	text-align: center;
-	padding: 7px;
+.page-body .summary {
+  text-align: center;
+  padding: 7px;
 }
 
-/*.page-body .summary::after {
-	content: "";
-	height: 10px;
-	display: block;
-	background-color: #4594ff;
-	position: relative;
-	box-shadow: 1rem 0.3rem 0rem rgba(0,0,0,0.7);
-	top: 0;
-	left: 3.5rem;
-	transform: skew(-60deg);
-}*/
-
-.we-offer .section{
-	height: 100%;
-	padding:7px; 
-	text-align: center;
-	background-color: #fff;
-	color:#4594ff;
-	/*border:2px solid #4594ff;
-	border-collapse: collapse;*/
-	margin: 0px 5px 0px 5px;
+.we-offer {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
-
-
-
+.we-offer .section {
+  height: 100%;
+  padding: 7px;
+  text-align: center;
+  background-color: #4594ff;
+  color: #fff;
+  margin: 0px 0px 0px 0px;
+  transition: color 0.4s, background-color 0.4s;
+  font-weight: 800;
+}
+.we-offer .section:hover {
+  background-color: #fff;
+  color: #4594ff;
+}
+.we-offer .section:focus {
+  background-color: #fff;
+  color: #4594ff;
+}
 .we-offer .section .title {
-	position: relative;
-	font-size: 26px;
-	font-weight: bolder;
+  position: relative;
+  font-size: 26px;
+  font-weight: bolder;
 }
-
-.we-offer .section .title{
-}
-
 .we-offer .section .icon {
-	font-size:32px;
-	text-shadow: 5px 5px 5px rgba(0,0,0,0.35);
+  font-size: 32px;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.35);
+}
+.we-offer .section p {
+  padding: 0.5rem;
 }
 
 .current-projects {
-	display: grid;
-	grid-template-columns: 6rem auto;
-	padding: 10px 0.5rem;
+  padding: 1rem 8.5rem;
+}
+.current-projects .col-12 {
+  padding: 0.7rem;
+}
+.current-projects .project {
+  border-bottom: 2px solid #4594ff;
+  border-right: 2px solid #4594ff;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 5px;
+  box-shadow: -5px -5px 5px #e2eeff;
+  height: 100%;
+  position: relative;
+  padding-bottom: 30px;
+  overflow: hidden;
+}
+.current-projects .project.reverse {
+  border-right: 0px solid #4594ff;
+  border-left: 2px solid #4594ff;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 5px;
+  box-shadow: 5px -5px 5px #e2eeff;
+}
+.current-projects .project.reverse a {
+  left: 0;
+}
+.current-projects .project.reverse a:before {
+  top: 0;
+  right: -1rem;
+  transform: skew(40deg);
+}
+.current-projects .project svg {
+  width: 6rem;
+  height: auto;
+  -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+}
+.current-projects .project p {
+  padding: 0.5rem 2rem;
+  text-align: right;
+}
+.current-projects .project h5 {
+  margin: 1rem 0;
+}
+.current-projects .project a {
+  display: block;
+  position: absolute;
+  background-color: #4594ff;
+  padding: 5px;
+  bottom: -0.2rem;
+  width: 15rem;
+  height: auto;
+  overflow: visible;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bolder;
+  transition: text-shadow 0.5s;
+}
+.current-projects .project a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #4594ff;
+  width: 2rem;
+  height: 101%;
+  top: 0;
+  left: -1rem;
+  transform: skew(-40deg);
+}
+.current-projects .project a:hover {
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.35);
+}
+.current-projects .project a:focus {
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.35);
 }
 
-.current-projects .button-line {
-	display: flex;
-	flex-direction: column;
-
+.contact-us {
+  display: block;
+  background-color: #2d3949;
+  padding: 2rem 5rem;
+}
+.contact-us h3 {
+  margin: 0 0 2rem 0;
+  font-size: 40px;
+  color: #fff;
+  font-weight: bolder;
+}
+.contact-us .form-control {
+  direction: rtl;
+  background-color: transparent;
+  border: 0px solid red;
+  border-radius: 0px;
+  border-bottom: 1px solid #e2eeff;
+  color: #fff;
+}
+.contact-us .form-control:focus {
+  box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.2);
+}
+.contact-us .form-text {
+  color: #d1d1d1;
+}
+.contact-us label {
+  color: #fff;
 }
 
-.current-projects .project-data {
-	display: block;
-
+.fs-window {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  top: 0;
 }
 
-.current-projects .button-line .pjct-btn {
-	font-size: 40px;
-	background-color: red;
-	margin: 5px 5px;
-	width: 4.5rem;
-	height: 4.5rem;
-	display: block;
+@media screen and (max-width: 600px) {
+  .current-projects {
+    padding: 10px 0.2rem;
+  }
+
+  .contact-us {
+    padding: 2rem 2rem;
+  }
 }
 
-.current-projects .button-line .pjct-btn .svg {
-	display: block;
-	height: 100%;
-	width: auto;
-	position: relative;
-	top: -0.2rem;
-}
-
-.current-projects .button-line .pjct-btn .svg.parking {
-	top: 0rem;
-}
-
-
-
-
-@media screen and (max-width: 600px){
-	.current-projects {
-		display: grid;
-		grid-template-columns: auto;
-		padding: 10px 0.5rem;
-	}
-	.current-projects .button-line {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-	}
-}
+/*# sourceMappingURL=style.css.map */

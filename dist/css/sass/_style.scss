@@ -234,6 +234,14 @@ $av-w-text: rgb(209, 209, 209);
 	
 }
 
+.fs-window {
+	height: 100%;
+	width: 100%;
+	background-color: white;
+	position: absolute;
+	top:0;
+}
+
 
 
 @media screen and (max-width: 600px){
