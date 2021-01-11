@@ -237,7 +237,11 @@ $av-w-text: rgb(209, 209, 209);
 .header {
 	width: 100%;
 	height: auto;
-	padding:1.5rem 0;
+	padding:1rem 0;
+	border-bottom:1px solid $av-reg;
+	background-color: $av-reg;
+	box-shadow: 0 0 7px rgba(0, 0, 0, 0.7);
+	margin-bottom:2rem;
 
 	img {
 		display: block;
@@ -262,7 +266,11 @@ $av-w-text: rgb(209, 209, 209);
 			padding-bottom:7px;
 			text-align: center;
 			text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-			border-bottom:2px solid $av-regdark;
+			//border-bottom:2px solid $av-regdark;
+		}
+		p{
+			border-top:2px solid $av-regdark;
+			padding:0.5rem 1rem;
 		}
 		
 	}
@@ -306,7 +314,41 @@ $av-w-text: rgb(209, 209, 209);
 }
 
 .av-btn-group {
-	display:inline-flex;
+	display:flex;
+	padding:1rem 0.5rem;
+
+	.av-btn {
+		display:flex;
+		background-color:white;
+		color:$av-reg;
+		padding:5px;
+		border:1px solid $av-reg;
+		font-weight: bold;
+		flex: 1 1 auto;
+		justify-content: center;
+		transition:background-color 0.2s, color 0.2s;
+		
+		&.active {
+			background-color:$av-reg;
+			color:white;
+		}
+
+		&:hover {
+			background-color:$av-reg;
+			color:white;
+		}
+		&:focus{
+			background-color:$av-reg;
+			color:white;
+		}
+	}
+	.av-btn:first-child {
+		border-radius: 0px 15px 15px 0px;
+	}
+	.av-btn:last-child {
+		border-right:0;
+		border-radius: 15px 0px 0px 15px;
+	}
 }
 
 
