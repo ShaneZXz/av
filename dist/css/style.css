@@ -195,16 +195,56 @@
 }
 
 .product-title {
-  display: grid;
-  grid-template-columns: 200px auto;
-  grid-template-rows: 100px auto;
+  display: flex;
+  padding: 0 2.5rem;
+}
+.product-title div {
+  margin: 0 1rem;
+}
+.product-title .text h1 {
+  color: #2d3949;
+  font-weight: bold;
+  padding-bottom: 7px;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  border-bottom: 2px solid #2d3949;
 }
 .product-title .img {
-  grid-row-start: 1;
-  grid-row-end: span 2;
+  width: 20rem;
+  height: 20rem;
+  z-index: 1;
+  position: relative;
+}
+.product-title .img::after {
+  content: "";
+  display: block;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fce0ed;
+  background: linear-gradient(150deg, #fce0ed 0%, #4594ff 100%);
+  z-index: -1;
+  right: 0;
+  transform: skew(3deg, 3deg);
+  border-radius: 7px;
+  box-shadow: 0px 0px 3px rgba(182, 229, 238, 0.541);
+}
+.product-title .img svg {
+  width: 20rem;
+  height: 20rem;
+  background-color: white;
+}
+.product-title .img svg path {
+  -webkit-filter: drop-shadow(0.08rem 0.06rem 0.03rem rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0.08rem 0.06rem 0.03rem rgba(0, 0, 0, 0.1));
 }
 
-@media screen and (max-width: 600px) {
+.av-btn-group {
+  display: inline-flex;
+}
+
+@media screen and (max-width: 700px) {
   .current-projects {
     padding: 10px 0.2rem;
   }
@@ -214,13 +254,19 @@
   }
 
   .product-title {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
+    flex-wrap: wrap;
+    padding: 0 0.5rem;
+  }
+  .product-title div {
+    margin: 0.5rem auto;
   }
   .product-title .img {
-    grid-row-start: 1;
-    grid-row-end: 1;
+    width: 15rem;
+    height: 15rem;
+  }
+  .product-title .img svg {
+    width: 15rem;
+    height: 15rem;
   }
 }
 
