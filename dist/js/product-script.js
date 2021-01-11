@@ -1,3 +1,5 @@
 $('.av-btn-group').on('click','.av-btn',function(e){
-    console.log(this);
+    $(this).parent().find('.av-btn').removeClass('active');
+    $(this).addClass('active');
 });
+
