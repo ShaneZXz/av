@@ -202,6 +202,10 @@ body {
   height: auto;
 }
 
+[data-bp-plus] {
+  display: none;
+}
+
 .product-title {
   display: flex;
   padding: 0 2.5rem;
@@ -209,6 +213,9 @@ body {
 }
 .product-title div {
   margin: 0 1rem;
+}
+.product-title .text {
+  width: 100%;
 }
 .product-title .text h1 {
   color: #2d3949;
@@ -218,8 +225,16 @@ body {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 .product-title .text p {
+  font-size: 18px;
+}
+.product-title .text p.bp-plus {
+  font-weight: bolder;
+  color: #4594ff;
+  text-shadow: 0 0 3px #4e76a3;
+}
+.product-title .text p:first-of-type {
   border-top: 2px solid #2d3949;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0 0 0;
   font-size: 26px;
 }
 .product-title .img {
@@ -227,6 +242,7 @@ body {
   height: 20rem;
   z-index: 1;
   position: relative;
+  align-self: center;
 }
 .product-title .img::after {
   content: "";
@@ -290,44 +306,6 @@ body {
   border-radius: 15px 0px 0px 15px;
 }
 
-.product-body {
-  padding: 0 10%;
-}
-.product-body .item {
-  display: inline-flex;
-  border-radius: 40px;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
-}
-.product-body .item .img {
-  border: 2px solid #4594ff;
-  background-color: #4594ff;
-  padding: 2rem;
-  display: flex;
-  width: auto;
-  height: auto;
-  flex-shrink: 0;
-  justify-content: center;
-  align-items: center;
-  border-top-right-radius: 40px;
-  border-bottom-right-radius: 40px;
-}
-.product-body .item .img i {
-  font-size: 150px;
-  color: white;
-  text-shadow: 4px -5px 2px rgba(0, 0, 0, 0.5), -4px 5px 2px rgba(255, 255, 255, 0.3);
-}
-.product-body .item .context {
-  padding: 0.8rem;
-  border: 2px solid #4594ff;
-  width: 100%;
-  display: flex;
-  font-size: 18px;
-  justify-content: center;
-  align-items: center;
-  border-top-left-radius: 40px;
-  border-bottom-left-radius: 40px;
-}
-
 @media screen and (max-width: 700px) {
   .current-projects {
     padding: 10px 0.2rem;
@@ -352,11 +330,8 @@ body {
     width: 15rem;
     height: 15rem;
   }
-
-  .product-body .item {
-    display: block;
-    width: auto;
-    height: auto;
+  .product-title .text p {
+    font-size: 16px;
   }
 }
 
