@@ -1,5 +1,4 @@
 $('#sendForm').click(function(){
-
     const Toast = Swal.mixin({
         toast: true,
         position: 'top',
