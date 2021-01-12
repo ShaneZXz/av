@@ -6,7 +6,7 @@ $av-triadic:#ff7cb4;
 $av-regdark:#2d3949;
 $av-w-text: rgb(209, 209, 209);
 
-body{padding-bottom:2.5rem;}
+
 
 
 .page-header {
@@ -73,11 +73,7 @@ body{padding-bottom:2.5rem;}
 		transition: color 0.4s, background-color 0.4s;
 		font-weight: 800;
 
-		&:hover {
-			background-color:#fff;
-			color:$av-reg;
-		}
-		&:focus{
+		&:hover, &:focus {
 			background-color:#fff;
 			color:$av-reg;
 		}
@@ -189,10 +185,7 @@ body{padding-bottom:2.5rem;}
 				transform: skew(-40deg);
 				
 			}
-			&:hover {
-				text-shadow: 5px 5px 5px (rgba(0,0,0,0.35));
-			}
-			&:focus {
+			&:hover, &:focus {
 				text-shadow: 5px 5px 5px (rgba(0,0,0,0.35));
 			}
 
@@ -254,9 +247,6 @@ body{padding-bottom:2.5rem;}
 	}
 }
 
-[data-bp-plus] {
-	display:none;
-}
 
 .product-title {
 	display:flex;
@@ -284,7 +274,7 @@ body{padding-bottom:2.5rem;}
 				color:$av-reg;
 				text-shadow: 0 0 3px $av-reg;
 				i{
-					color:rgb(255, 227, 149);
+					color:$av-reg;
 				}
 			}
 		}
@@ -379,7 +369,7 @@ body{padding-bottom:2.5rem;}
 	display:flex;
 	padding: 1.5rem 2rem;
 	position: relative;
-	margin:2rem 0rem;
+	margin:2rem 0 0 0;
 	text-align: center;
 	.item {
 		display:flex;
@@ -421,11 +411,15 @@ body{padding-bottom:2.5rem;}
 		}
 		.context {
 			display:flex;
-			
 			flex-wrap: wrap;
 			padding:1rem 2rem;
 			text-align:right;
-			*{
+			.bp-plus{
+				font-weight: bold;
+				text-shadow: 0 0 3px $av-reg;
+				color:$av-reg;
+			}
+			* {
 				flex-basis: 100%;
 			}
 		}
@@ -444,6 +438,7 @@ body{padding-bottom:2.5rem;}
 				margin: 0 auto 0 20px;
 
 				&::after {
+					display:none;
 				background: white;
 				//box-shadow: 0px 0px 5px rgb(0,0,0,0.2); 
 				}
@@ -454,7 +449,17 @@ body{padding-bottom:2.5rem;}
   				filter: drop-shadow(0rem 0rem 0.3rem rgba(255, 255, 255, 1));
 				}
 			}
+			.context{
+				.bp-plus{
+					font-weight: bold;
+					text-shadow: 0 0 3px white;
+					color:white;
+				}
+			}
 		}
+	}
+	&.last{
+		margin:2rem 0;
 	}
 }
 
@@ -514,4 +519,8 @@ body{padding-bottom:2.5rem;}
 	}
 
 
+}
+
+[data-bp-plus] {
+	display:none;
 }

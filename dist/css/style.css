@@ -1,7 +1,3 @@
-body {
-  padding-bottom: 2.5rem;
-}
-
 .page-header {
   height: 420px;
   width: 100%;
@@ -55,11 +51,7 @@ body {
   transition: color 0.4s, background-color 0.4s;
   font-weight: 800;
 }
-.we-offer .section:hover {
-  background-color: #fff;
-  color: #4594ff;
-}
-.we-offer .section:focus {
+.we-offer .section:hover, .we-offer .section:focus {
   background-color: #fff;
   color: #4594ff;
 }
@@ -150,10 +142,7 @@ body {
   left: -1rem;
   transform: skew(-40deg);
 }
-.current-projects .project a:hover {
-  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.35);
-}
-.current-projects .project a:focus {
+.current-projects .project a:hover, .current-projects .project a:focus {
   text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.35);
 }
 
@@ -202,10 +191,6 @@ body {
   height: auto;
 }
 
-[data-bp-plus] {
-  display: none;
-}
-
 .product-title {
   display: flex;
   padding: 0 2.5rem;
@@ -233,7 +218,7 @@ body {
   text-shadow: 0 0 3px #4594ff;
 }
 .product-title .text p.bp-plus i {
-  color: #ffe395;
+  color: #4594ff;
 }
 .product-title .text p:first-of-type {
   border-top: 2px solid #2d3949;
@@ -313,7 +298,7 @@ body {
   display: flex;
   padding: 1.5rem 2rem;
   position: relative;
-  margin: 2rem 0rem;
+  margin: 2rem 0 0 0;
   text-align: center;
 }
 .product-body .item {
@@ -357,6 +342,11 @@ body {
   padding: 1rem 2rem;
   text-align: right;
 }
+.product-body .item .context .bp-plus {
+  font-weight: bold;
+  text-shadow: 0 0 3px #4594ff;
+  color: #4594ff;
+}
 .product-body .item .context * {
   flex-basis: 100%;
 }
@@ -375,12 +365,21 @@ body {
   margin: 0 auto 0 20px;
 }
 .product-body.reversed .item .img::after {
+  display: none;
   background: white;
 }
 .product-body.reversed .item .img svg {
   fill: white;
   -webkit-filter: drop-shadow(0rem 0rem 0.3rem white);
   filter: drop-shadow(0rem 0rem 0.3rem white);
+}
+.product-body.reversed .item .context .bp-plus {
+  font-weight: bold;
+  text-shadow: 0 0 3px white;
+  color: white;
+}
+.product-body.last {
+  margin: 2rem 0;
 }
 
 @media screen and (max-width: 700px) {
@@ -429,6 +428,9 @@ body {
   .product-body .item .context {
     padding: 1rem 0;
   }
+}
+[data-bp-plus] {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
