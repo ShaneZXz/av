@@ -221,7 +221,6 @@
   color: #4594ff;
 }
 .product-title .text p:first-of-type {
-  border-top: 2px solid #2d3949;
   padding: 0.5rem 0 0 0;
   font-size: 26px;
 }
@@ -429,6 +428,29 @@
     padding: 1rem 0;
   }
 }
+.under-construction {
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  background: #4594ff;
+  background: linear-gradient(150deg, #587fff 0%, #4594ff 100%);
+}
+.under-construction * {
+  position: relative;
+  top: 30%;
+  margin: 20px auto;
+  text-align: center;
+  color: white;
+}
+.under-construction .logo {
+  display: block;
+  min-width: 300px;
+  min-height: auto;
+  max-width: 450px;
+  max-height: auto;
+}
+
 [data-bp-plus] {
   display: none;
 }

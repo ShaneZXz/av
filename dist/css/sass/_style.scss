@@ -279,7 +279,7 @@ $av-w-text: rgb(209, 209, 209);
 			}
 		}
 		p:first-of-type{
-			border-top:2px solid $av-regdark;
+			//border-top:2px solid $av-regdark;
 			padding:0.5rem 0 0 0;
 			font-size:26px;
 		}
@@ -395,7 +395,6 @@ $av-w-text: rgb(209, 209, 209);
 				background: linear-gradient(110deg, rgba(252,224,237,1) 0%, rgba(69,148,255,1) 100%); 
 				z-index: -1;
 				right: 0;
-				//transform: skew(-7deg, 10deg);
 				transform:rotate(45deg);
 				border-radius: 7px;
 				box-shadow: 0px 0px 3px rgba(182, 229, 238, 0.541);
@@ -427,7 +426,7 @@ $av-w-text: rgb(209, 209, 209);
 	&.reversed{
 		background-color: $av-reg;
 		z-index: -2;
-		//border-radius: 10px;
+		
 		box-shadow: 0 5px 7px 1px rgba(0,0,0,0.4);
 		color:white;
 		.item{
@@ -439,8 +438,8 @@ $av-w-text: rgb(209, 209, 209);
 
 				&::after {
 					display:none;
-				background: white;
-				//box-shadow: 0px 0px 5px rgb(0,0,0,0.2); 
+					background: white;
+				
 				}
 				
 				svg {
@@ -519,6 +518,30 @@ $av-w-text: rgb(209, 209, 209);
 	}
 
 
+}
+
+.under-construction {
+	height: 100%;
+	width: 100%;
+	display: block;
+	position: absolute;
+	background: rgba(69,148,255,1);
+	background: linear-gradient(150deg, rgb(88, 127, 255) 0%, rgba(69,148,255,1) 100%); 
+	* {
+		position: relative;
+		top:30%;
+		margin:20px auto;
+		text-align: center;
+		color:white;
+	}
+	.logo{
+		//padding:10px;
+		display: block;
+		min-width: 300px;
+		min-height: auto;
+		max-width: 450px;
+		max-height: auto;
+	}
 }
 
 [data-bp-plus] {
