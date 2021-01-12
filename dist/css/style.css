@@ -311,18 +311,16 @@ body {
 
 .product-body {
   display: flex;
-  padding: 1.5rem 4rem;
-  margin: 2rem 0;
+  padding: 1.5rem 2rem;
+  position: relative;
+  margin: 2rem 0rem;
   text-align: center;
-}
-.product-body.reversed .item {
-  flex-direction: row-reverse;
 }
 .product-body .item {
   display: flex;
 }
 .product-body .item div {
-  margin: 0 3rem 0 0;
+  margin: 0 1rem;
 }
 .product-body .item .img {
   display: flex;
@@ -351,9 +349,38 @@ body {
 .product-body .item .img svg {
   height: 100%;
   width: 100%;
+  fill: #4594ff;
 }
 .product-body .item .context {
   display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 2rem;
+  text-align: right;
+}
+.product-body .item .context * {
+  flex-basis: 100%;
+}
+.product-body.reversed {
+  background-color: #4594ff;
+  z-index: -2;
+  box-shadow: 0 5px 7px 1px rgba(0, 0, 0, 0.4);
+  color: white;
+}
+.product-body.reversed .item {
+  flex-direction: row-reverse;
+  width: 100%;
+}
+.product-body.reversed .item .img {
+  background-color: #4594ff;
+  margin: 0 auto 0 20px;
+}
+.product-body.reversed .item .img::after {
+  background: white;
+}
+.product-body.reversed .item .img svg {
+  fill: white;
+  -webkit-filter: drop-shadow(0rem 0rem 0.3rem white);
+  filter: drop-shadow(0rem 0rem 0.3rem white);
 }
 
 @media screen and (max-width: 700px) {
@@ -382,6 +409,25 @@ body {
   }
   .product-title .text p {
     font-size: 16px;
+  }
+
+  .product-body {
+    padding: 1rem 1rem;
+  }
+  .product-body.reversed .item {
+    flex-direction: column;
+  }
+  .product-body.reversed .item .img {
+    margin: 2rem 0;
+  }
+  .product-body .item {
+    flex-direction: column;
+  }
+  .product-body .item div {
+    margin: 2rem 0;
+  }
+  .product-body .item .context {
+    padding: 1rem 0;
   }
 }
 
