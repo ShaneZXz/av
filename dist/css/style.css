@@ -442,10 +442,11 @@
   margin: 20px auto;
   text-align: center;
   color: white;
+  -webkit-text-stroke: 1px black;
+  font-weight: bolder;
 }
 .under-construction .logo {
   display: block;
-  min-width: 300px;
   min-height: auto;
   max-width: 450px;
   max-height: auto;
