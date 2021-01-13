@@ -181,6 +181,7 @@
   padding: 1rem 0;
   border-bottom: 1px solid #4594ff;
   background-color: #4594ff;
+  display: block;
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.7);
   margin-bottom: 2rem;
 }
