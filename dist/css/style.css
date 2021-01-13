@@ -204,11 +204,13 @@
   width: 100%;
 }
 .product-title .text h1 {
-  color: #2d3949;
-  font-weight: bold;
+  color: #565656;
   padding-bottom: 7px;
-  text-align: center;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.product-title .text h1 span {
+  text-shadow: 0 0 3px #4594ff;
+  display: none;
+  color: #4594ff;
 }
 .product-title .text p {
   font-size: 18px;

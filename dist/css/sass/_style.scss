@@ -261,13 +261,16 @@ $av-w-text: rgb(209, 209, 209);
 	.text {
 		width:100%;
 		h1 {
-			color:$av-regdark;
-			font-weight: bold;
+			color:$av-dark;
 			padding-bottom:7px;
-			text-align: center;
-			text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
 			//border-bottom:2px solid $av-regdark;
+			span{
+				text-shadow: 0 0 3px $av-reg;
+				display:none;
+				color:$av-reg;
+			}
 		}
+
 		p {
 			font-size:18px;
 			&.bp-plus {
@@ -372,6 +375,7 @@ $av-w-text: rgb(209, 209, 209);
 	position: relative;
 	margin:2rem 0 0 0;
 	text-align: center;
+	
 	.item {
 		display:flex;
 		div{
