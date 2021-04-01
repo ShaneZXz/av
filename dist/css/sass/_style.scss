@@ -7,7 +7,9 @@ $av-regdark:#2d3949;
 $av-w-text: rgb(209, 209, 209);
 
 
-
+body{
+	user-select:none;
+}
 
 .page-header {
 	height: 420px;
@@ -87,6 +89,13 @@ $av-w-text: rgb(209, 209, 209);
 		.icon {
 			font-size:32px;
 			text-shadow: 5px 5px 5px rgba(0,0,0,0.35);
+			svg {
+				width:64px;
+				height:64px;
+				-webkit-filter: drop-shadow( 5px 5px 5px rgba(0,0,0,0.35));
+  				filter: drop-shadow( 5px 5px 5px rgba(0,0,0,0.35));
+
+			}
 		}
 
 		p {
@@ -142,11 +151,14 @@ $av-w-text: rgb(209, 209, 209);
 
 		}
 
-		svg {
+		svg, img {
 			width:6rem;
 			height: auto;
 			-webkit-filter: drop-shadow( 2px 2px 2px rgba(0, 0, 0, 0.2));
   			filter: drop-shadow( 2px 2px 2px rgba(0, 0, 0, 0.2));
+		}
+		img{
+			padding-top:12px;
 		}
 
 		p {
@@ -301,9 +313,12 @@ $av-w-text: rgb(209, 209, 209);
 			display: flex;
 			align-content: center;
 			justify-content: center;
-			img{
+			
+			img, svg{
 				height:300px;
 				width: 300px;
+				-webkit-filter: drop-shadow(15px 15px 7px rgba(0, 0, 0, 0.5));
+				filter: drop-shadow(15px 15px 7px rgba(0, 0, 0, 0.5));
 				
 			}
 		}
@@ -334,6 +349,11 @@ $av-w-text: rgb(209, 209, 209);
 					filter: drop-shadow(12px 12px 5px rgba(255, 255, 255, 0.5));
 				}
 			}
+			.content{
+				h5{
+					font-size:36px;
+				}
+			}
 		&.reversed {
 			background-color:transparent;
 			justify-content: space-between;
@@ -357,11 +377,10 @@ $av-w-text: rgb(209, 209, 209);
 			max-width: 320px;
 			margin: 10px auto;
 			.card-header{
-				min-height:200px;
-				background: $av-reg;
-				   
-				text-shadow: 2px 2px 7px rgba(255,255,255,0.95);
-				padding: 15px 0 0 0;
+				min-height: 100px;
+				background: #4594ff;
+				text-shadow: 2px 2px 7px rgba(255, 255, 255, 0.95);
+				padding: 10px 0 27px;
 				.price-monthly{
 					display:flex;
 					align-items: baseline;
@@ -369,7 +388,7 @@ $av-w-text: rgb(209, 209, 209);
 					
 					div:first-child {
 						color:#fff;
-						font-size:68px;
+						font-size:64px;
 						font-weight: 600;
 						
 					}
@@ -402,7 +421,7 @@ $av-w-text: rgb(209, 209, 209);
 				display: flex;
 				position: absolute;
 				left: 0px;
-				top: 165px;
+				top: 99px;
 				color: #fff;
 				.text{
 					display: flex;
@@ -435,11 +454,12 @@ $av-w-text: rgb(209, 209, 209);
 					display:flex;
 					justify-content: space-between;
 					align-items: center;
-					font-size:20px;
+					font-size:16px;
 					border-bottom: 1px solid $av-reg;
 					padding:10px;
 					i{
 						color:rgba(0,0,0, 0.2);
+						cursor:pointer;
 						//text-shadow:1px 1px 1px rgba(0, 0, 0, 0.5);
 						transition: color 0.2s;
 						&:hover, &:focus {
@@ -448,6 +468,35 @@ $av-w-text: rgb(209, 209, 209);
 					}
 				}
 			}
+		}
+	}
+	.reqs-n-lims{
+		.card{
+			height: 100%;
+		}
+	}
+	.product-price-top{
+		background-color:$av-regdark;
+		padding:30px 20px;
+		color:#fff;
+		.price{
+			color:$av-reg;
+			text-shadow:4px 4px 8px rgba(0,0,0,0.5), 0 0 4px $av-reg;
+			font-weight: 500;
+		}
+		.ppt{
+			margin:0 10px;
+		}
+		.box{
+			background-color:$av-reg;
+			border-radius:5px;
+			height: 100%;
+			box-shadow:0px 5px 5px rgba(0, 0, 0, 0.5);
+			padding:10px 0;
+			.highlight{
+				color:$av-highlight;
+			}
+
 		}
 	}
 }
@@ -512,4 +561,98 @@ $av-w-text: rgb(209, 209, 209);
 
 [data-bp-plus] {
 	display:none;
+}
+
+.av-btn {
+		position: relative;
+		width: 100%;
+		background: $av-reg;
+		color:white;
+		display: block;
+		padding: 5px 10px;
+		text-align:center;
+		border:1px solid rgba(255,255,255,0.2);
+		//border-radius:7px;
+		text-decoration: none;
+		overflow:hidden;
+		transition: background-color 0.2s, color 0.2s, border 0.2s;
+		outline:0;
+		cursor: pointer;
+		&:hover, &:focus{
+			background: white;
+			color:$av-reg;
+			border:1px solid $av-reg;
+			outline:0;
+		}
+		*{
+			pointer-events: none;
+			user-select: none; 
+		}
+}
+
+@keyframes ripple {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+}
+span.ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 600ms linear;
+    background-color: $av-reg;
+    z-index: 300;
+    pointer-events: none;
+}
+
+.custom-card {
+	.card-header{
+		color:#fff;
+		background-color:$av-reg;
+		.card-tools {
+			.tool{
+				color:#fff;
+				transition:color 0.2s, text-shadow 0.2s;
+				cursor:pointer;
+				&:hover, &:focus{
+					color: lightgrey;
+					text-shadow:0 0 3px rgba(0,0,0,0.35);
+					
+				}
+			}
+		}
+	}
+	.card-body{
+		display:none;
+	}
+}
+
+.form-av-control {
+		&.light{
+			color:white;
+			border-bottom:1px solid #fff;
+			&:focus{
+				color:#fff;
+			}
+		}
+		direction: rtl;
+		background-color: transparent;
+		background:transparent;
+		border:0px solid red;
+		border-radius: 0px;
+		border-bottom:1px solid $av-reg;
+		//color:$av-reg;
+		&:focus {
+			box-shadow:1px 1px 5px rgba(255,255,255,0.2);
+			background-color:transparent;
+		}
+}
+
+.form-av-label{
+	&.light{
+		color:#fff;
+	}
+		//color:$av-reg;
+
 }
